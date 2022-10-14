@@ -1,0 +1,27 @@
+{
+  "name": "pedalboard",
+  "version": "1.0.0",
+  "description": "Pedalboard.js\r ====\r #### Check out [pedals.io](https://pedals.io)! It's pedalboard.js packaged as a product you can really use.\r **Or check out the [demo](https://dashersw.github.com/pedalboard.js/demo). Make sure to try the real-time line-in feature by plugging in a guitar or a microphone.**",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "parcel serve public/index.html",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "parcel": "^2.7.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "erste": "^4.6.3"
+  }
+}
