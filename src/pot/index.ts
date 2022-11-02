@@ -1,0 +1,6 @@
+export { default as Linear } from './linear/linear'
+export { default as LinearModel } from './linear/linear-model'
+export { default as Log } from './log/log'
+export { default as LogModel } from './log/log-model'
+export { default as Pot } from './pot/pot'
+export { default as PotModel } from './pot/pot-model'
