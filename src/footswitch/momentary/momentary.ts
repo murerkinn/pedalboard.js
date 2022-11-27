@@ -7,6 +7,17 @@ class Momentary extends Switch {
 
     // this.state = false
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  override ['click .button']() {}
+
+  ['mousedown .button']() {
+    this.toggle()
+  }
+
+  ['mouseup .button']() {
+    this.toggle()
+  }
 }
 
 Momentary.prototype.modelClass = MomentaryModel

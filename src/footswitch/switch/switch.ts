@@ -2,10 +2,6 @@ import Component from '../../ui/component'
 import SwitchModel from './switch-model'
 
 class Switch extends Component {
-  mappings = {
-    BUTTON: '.button',
-  }
-
   constructor(opt_name?: string) {
     super()
 
