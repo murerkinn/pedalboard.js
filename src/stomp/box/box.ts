@@ -19,6 +19,10 @@ class Box extends Connectable {
   bypassSwitch: Switch
   led: Led
 
+  constructor(context: AudioContext) {
+    super(context)
+  }
+
   override createChildComponents() {
     super.createChildComponents()
 

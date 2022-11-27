@@ -19,19 +19,14 @@ function shadowTemplate(
 export function shadowMaker(
   element: HTMLElement,
   length: number,
-  darkness: number,
+  darkness = 1,
   weight: number,
-  opt_before?: string[],
-  opt_after?: string[]
+  before: string[] = [],
+  after: string[] = []
 ) {
-  opt_before = opt_before || []
-  opt_after = opt_after || []
-
   const elStyle = document.defaultView.getComputedStyle(element, null)
   const colorText = elStyle.getPropertyValue('background-color')
   const hslArray = color.hexToHsl(color.parse(colorText).hex)
-
-  darkness = darkness || 1
 
   hslArray[2] = hslArray[2] * darkness
 
@@ -96,7 +91,7 @@ export function shadowMaker(
     )
   )
 
-  shadows = [].concat(opt_before, shadows.reverse(), opt_after)
+  shadows = [].concat(before, shadows.reverse(), after)
   element.style['boxShadow'] = shadows.join(', ')
   element.style['left'] = `-${xAngle / 2}px`
 }
@@ -168,9 +163,10 @@ export function textShadowMakerDom(element: HTMLElement, length: number) {
   const rgbArray = color.hexToRgb(color.parse(colorText).hex)
 
   for (let i = 0; i < length; i++) {
-    const el = element.cloneNode(true) as any
+    const el = element.cloneNode(true) as HTMLElement
+
     el.style.position = 'absolute'
-    el.style.webkitTransform = `translateZ(-${i}px)`
+    el.style.transform = `translateZ(-${i}px)`
 
     el.style.color = color.rgbArrayToHex(
       color.darken(rgbArray as RGB, (i / length) * 0.8 + 0.2) as RGB
