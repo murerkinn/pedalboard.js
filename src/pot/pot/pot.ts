@@ -83,7 +83,7 @@ class Pot extends Component {
               <div class="knobHolder">
                 <div class="knob"></div>
               </div>
-              <div class="nameHolder">
+              <div class="nameHolder unselectable">
                 <div class="name">${this.model.name}</div>
               </div>
             </div>`
