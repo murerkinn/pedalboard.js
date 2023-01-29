@@ -69,7 +69,7 @@ class Box extends Connectable {
     return `
         <div class="box ${className}">
           <div class="pots">${this.pots.join('')}</div>
-          <div class="name">${this.name}</div>
+          <div class="name unselectable">${this.name}</div>
           <div class="leds">${this.leds.join('')}</div>
           <div class="switches">${this.switches.join('')}</div>
         </div>`
